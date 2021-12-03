@@ -20,7 +20,9 @@ class MakeAnyIconOptions {
   }
 
   factory MakeAnyIconOptions.fromJson(
-      Map<String, dynamic> json, String output) {
+    Map<String, dynamic> json,
+    String output,
+  ) {
     List<ImageSet> imageSets = (json['image_sets'] as List)
         .map((item) => ImageSet.fromJson(Map<String, dynamic>.from(item)))
         .toList();

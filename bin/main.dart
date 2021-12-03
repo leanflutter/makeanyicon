@@ -53,7 +53,7 @@ Future<void> main(List<String> args) async {
   final options = parser.parse(args);
 
   if (options['help'] == true) {
-    print('Usage: makeanyicon --icon=app_icon_1024.png\n');
+    print('Usage: makeanyicon --input=app_icon_1024.png\n');
     print(parser.usage);
     return;
   }
@@ -97,7 +97,9 @@ Future<void> main(List<String> args) async {
       return;
   }
 
-  await MakeAnyIcon.instance.make(inputArg,
-      MakeAnyIconOptions.fromFile(optionsFile, options['output'] ?? ''),
-      method: method);
+  await MakeAnyIcon.instance.make(
+    inputArg,
+    MakeAnyIconOptions.fromFile(optionsFile, options['output'] ?? ''),
+    method: method,
+  );
 }

@@ -37,7 +37,6 @@ Add `makeanyicon_options.yaml` to your project root directory.
 `makeanyicon_options.yaml`:
 
 ```yaml
-output: out/
 image_sets:
   - name: android
     path: android/app/src/main/res/
@@ -61,6 +60,9 @@ image_sets:
     path: ios/Runner/Assets.xcassets/AppIcon.appiconset/
     images:
       - size: 20x20
+        scale: 1x
+        filename: Icon-App-20x20@1x.png
+      - size: 20x20
         scale: 2x
         filename: Icon-App-20x20@2x.png
       - size: 20x20
@@ -76,35 +78,23 @@ image_sets:
         scale: 3x
         filename: Icon-App-29x29@3x.png
       - size: 40x40
+        scale: 1x
+        filename: Icon-App-40x40@1x.png
+      - size: 40x40
         scale: 2x
         filename: Icon-App-40x40@2x.png
       - size: 40x40
         scale: 3x
         filename: Icon-App-40x40@3x.png
       - size: 60x60
+        scale: 1x
+        filename: Icon-App-60x60@1x.png
+      - size: 60x60
         scale: 2x
         filename: Icon-App-60x60@2x.png
       - size: 60x60
         scale: 3x
         filename: Icon-App-60x60@3x.png
-      - size: 20x20
-        scale: 1x
-        filename: Icon-App-20x20@1x.png
-      - size: 20x20
-        scale: 2x
-        filename: Icon-App-20x20@2x.png
-      - size: 29x29
-        scale: 1x
-        filename: Icon-App-29x29@1x.png
-      - size: 29x29
-        scale: 2x
-        filename: Icon-App-29x29@2x.png
-      - size: 40x40
-        scale: 1x
-        filename: Icon-App-40x40@1x.png
-      - size: 40x40
-        scale: 2x
-        filename: Icon-App-40x40@2x.png
       - size: 76x76
         scale: 1x
         filename: Icon-App-76x76@1x.png
@@ -123,32 +113,23 @@ image_sets:
       - size: 16x16
         scale: 1x
         filename: app_icon_16.png
-      - size: 16x16
-        scale: 2x
-        filename: app_icon_32.png
       - size: 32x32
         scale: 1x
         filename: app_icon_32.png
-      - size: 32x32
-        scale: 2x
+      - size: 64x64
+        scale: 1x
         filename: app_icon_64.png
       - size: 128x128
         scale: 1x
         filename: app_icon_128.png
-      - size: 128x128
-        scale: 2x
-        filename: app_icon_256.png
       - size: 256x256
         scale: 1x
         filename: app_icon_256.png
-      - size: 256x256
-        scale: 2x
-        filename: app_icon_512.png
       - size: 512x512
         scale: 1x
         filename: app_icon_512.png
-      - size: 512x512
-        scale: 2x
+      - size: 1024x1024
+        scale: 1x
         filename: app_icon_1024.png
   - name: web
     path: web/
@@ -161,6 +142,12 @@ image_sets:
       - size: 512x512
         path: icons/
         filename: Icon-512.png
+      - size: 192x192
+        path: icons/
+        filename: Icon-maskable-192.png
+      - size: 512x512
+        path: icons/
+        filename: Icon-maskable-512.png
   - name: windows
     path: windows/runner/resources/
     images:
@@ -171,7 +158,7 @@ image_sets:
 Run:
 
 ```
-makeanyicon --icon=app_icon_1024.png
+makeanyicon --input=app_icon_1024.png
 ```
 
 ## License

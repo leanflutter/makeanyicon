@@ -8,8 +8,11 @@ class MakeAnyIcon {
   /// The shared instance of [MakeAnyIcon].
   static final MakeAnyIcon instance = MakeAnyIcon._();
 
-  Future<void> make(String iconPath, MakeAnyIconOptions options,
-      {ImageProcessingMethod method: ImageProcessingMethod.imgLib}) async {
+  Future<void> make(
+    String iconPath,
+    MakeAnyIconOptions options, {
+    ImageProcessingMethod method: ImageProcessingMethod.imgLib,
+  }) async {
     final anyIconMaker = AnyIconMaker();
     await anyIconMaker.make(
       iconPath,
