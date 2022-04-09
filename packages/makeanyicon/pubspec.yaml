@@ -12,9 +12,5 @@ dependencies:
   image: ^3.0.5
   yaml: ^3.1.0
 
-# dependency_overrides:
-#   any_icon_maker:
-#     path: ../any_icon_maker
-
 executables:
   makeanyicon: main

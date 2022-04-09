@@ -1,4 +1,5 @@
-.dart_tool/
-.packages
-build/
-pubspec.lock  # Except for application packages
+.DS_Store
+
+# IntelliJ related
+*.iml
+.idea/
